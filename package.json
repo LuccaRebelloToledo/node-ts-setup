@@ -6,7 +6,9 @@
   "author": "LuccaRebelloToledo",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon --exec ts-node ./src/shared/infra/http/index.ts",
+    "build": "tsc && tsc-alias",
+    "start": "node dist/shared/infra/http/index.js",
+    "start:dev": "nodemon --exec ts-node -r tsconfig-paths/register ./src/shared/infra/http/index.ts",
     "prepare": "husky",
     "eslint": "eslint ./src --max-warnings 0 --fix",
     "prettier": "prettier --write ./src",
@@ -32,6 +34,8 @@
     "prettier": "^3.2.5",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.8",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.3.3"
   }
 }
