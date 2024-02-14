@@ -1,0 +1,21 @@
+{
+  "verbose": true,
+  "roots": ["<rootDir>/src"],
+  "collectCoverageFrom": ["<rootDir>/src/modules/**/services/*.ts"],
+  "coverageDirectory": "coverage",
+  "collectCoverage": true,
+  "testEnvironment": "node",
+  "transform": {
+    ".+\\.ts$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@modules/(.*)": "<rootDir>/src/modules/$1",
+    "@config/(.*)": "<rootDir>/src/config/$1",
+    "@shared/(.*)": "<rootDir>/src/shared/$1",
+    "@/(.*)": "<rootDir>/src/$1"
+  },
+  "testMatch": ["**/*.spec.ts"],
+  "clearMocks": true,
+  "preset": "ts-jest",
+  "setupFilesAfterEnv": ["./src/config/jest.config.ts"]
+}
