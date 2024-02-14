@@ -1,0 +1,12 @@
+{
+  "name": "node-ts-setup",
+  "version": "1.0.0",
+  "description": "Project Setup - NodeJs with Typescript",
+  "main": "index.js",
+  "author": "LuccaRebelloToledo",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3"
+  }
+}
