@@ -6,7 +6,11 @@
   "author": "LuccaRebelloToledo",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon --exec ts-node ./src/shared/infra/http/index.ts"
+    "start:dev": "nodemon --exec ts-node ./src/shared/infra/http/index.ts",
+    "prepare": "husky",
+    "eslint": "eslint ./src --max-warnings 0 --fix",
+    "prettier": "prettier --write ./src",
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
@@ -15,6 +19,8 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-node": "^11.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "nodemon": "^3.0.3",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
