@@ -25,6 +25,7 @@
     "@typescript-eslint/parser": "^7.0.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^27.8.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-security": "^1.7.1",
     "git-commit-msg-linter": "^5.0.6",
