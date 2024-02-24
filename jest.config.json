@@ -3,7 +3,6 @@
   "roots": ["<rootDir>/src"],
   "collectCoverageFrom": ["<rootDir>/src/modules/**/services/*.ts"],
   "coverageDirectory": "coverage",
-  "collectCoverage": true,
   "testEnvironment": "node",
   "transform": {
     ".+\\.ts$": "ts-jest"
@@ -16,6 +15,5 @@
   },
   "testMatch": ["**/*.spec.ts"],
   "clearMocks": true,
-  "preset": "ts-jest",
-  "setupFilesAfterEnv": ["./src/config/jest.config.ts"]
+  "preset": "ts-jest"
 }
