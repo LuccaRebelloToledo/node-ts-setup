@@ -14,7 +14,7 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --passWithNoTests --watch",
     "test:push": "jest --passWithNoTests --collectCoverage",
-    "prepare": "husky"
+    "husky:prepare": "husky"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
