@@ -1,32 +1,41 @@
 {
   "compilerOptions": {
+    // Basic Options
     "target": "ES2022",
-    "lib": ["es5", "es6", "ES2023"],
     "module": "CommonJS",
-    "moduleResolution": "node",
+    "lib": ["es5", "es6", "ES2023"],
+    "allowJs": true,
     "outDir": "./dist",
-    "baseUrl": "./src",
     "rootDir": "./src",
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "sourceRoot": "/",
+    "forceConsistentCasingInFileNames": true,
+
+    // Strict Checks
     "strict": true,
     "strictPropertyInitialization": false,
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "paths": {
-      "@modules/*": ["modules/*"],
-      "@config/*": ["config/*"],
-      "@shared/*": ["shared/*"],
-    },
-    "esModuleInterop": true,
+
+    // Additional Checks
+    "allowUnreachableCode": false,
+    "skipLibCheck": true,
+
+    // Experimental Options
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+
+    // Debugging Options
     "sourceMap": true,
-    "inlineSources": true,
-    "sourceRoot": "/"
+    "inlineSources": true
   },
-  "include": ["src/*"],
+
+  // ts-node
   "ts-node": {
     "files": true
-  }
+  },
+
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "coverage"]
 }

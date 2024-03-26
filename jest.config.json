@@ -1,19 +1,22 @@
 {
-  "verbose": true,
-  "roots": ["<rootDir>/src"],
-  "collectCoverageFrom": ["<rootDir>/src/modules/**/services/*.ts"],
-  "coverageDirectory": "coverage",
+  "preset": "ts-jest",
   "testEnvironment": "node",
+  "verbose": true,
+  "clearMocks": true,
+
+  "roots": ["<rootDir>/src"],
+
+  "testMatch": ["**/*.spec.ts"],
+
+  "collectCoverageFrom": ["<rootDir>/src/**/*.ts"],
+
+  "coverageDirectory": "coverage",
+
   "transform": {
     ".+\\.ts$": "ts-jest"
   },
+
   "moduleNameMapper": {
-    "@modules/(.*)": "<rootDir>/src/modules/$1",
-    "@config/(.*)": "<rootDir>/src/config/$1",
-    "@shared/(.*)": "<rootDir>/src/shared/$1",
     "@/(.*)": "<rootDir>/src/$1"
-  },
-  "testMatch": ["**/*.spec.ts"],
-  "clearMocks": true,
-  "preset": "ts-jest"
+  }
 }
